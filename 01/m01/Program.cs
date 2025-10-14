@@ -5,6 +5,8 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Bienvenidos al Módulo 01");
-        }
+
+			ClasesYMetodosGenericos.Demos();
+		}
     }
 }
