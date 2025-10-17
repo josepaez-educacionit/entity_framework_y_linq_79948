@@ -6,7 +6,13 @@
         {
             Console.WriteLine("Bienvenidos al Módulo 01");
 
-			ClasesYMetodosGenericos.Demos();
+            // ClasesYMetodosGenericos.Demos();
+
+            // MetodosDeExtension.Demos();
+
+            // InferenciaDeTipos.Demos();
+
+            InicializadoresDeObjetosYColecciones.Demos();
 		}
     }
 }
