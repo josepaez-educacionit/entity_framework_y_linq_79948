@@ -14,7 +14,9 @@
 
 			// InicializadoresDeObjetosYColecciones.Demos();
 
-			TiposAnonimos.Demos();
+			// TiposAnonimos.Demos();
+
+			ClasesYMetodosParciales.Demos();
 		}
     }
 }
