@@ -1,11 +1,18 @@
 ﻿
 
 using m01.clases;
+using System.Linq.Expressions;
 
 namespace m01
 {
 	// INICIALIZADORES DE OBJETOS:
 	// Permiten crear e inicializar objetos de forma concisa asignando valores a sus propiedades al momento de su creación, sin usar constructores o métodos adicionales.
+
+	//	Inicializadores de Objetos
+	// Los inicializadores de objetos permiten establecer las propiedades de un objeto en el momento de su creación. Esto se hace utilizando una sintaxis sencilla que consiste en especificar el nombre de la propiedad seguido de su valor entre llaves {}.
+
+	// Inicializadores de Colecciones
+	// Los inicializadores de colecciones permiten crear y llenar colecciones(como listas, diccionarios, etc.) en una sola expresión.Esto se hace utilizando una sintaxis similar a la de los inicializadores de objetos.
 
 	public class InicializadoresDeObjetosYColecciones
 	{
