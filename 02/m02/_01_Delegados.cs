@@ -24,9 +24,7 @@ namespace m02
 
 			//DemoDelegadosBasicos3();
 
-			//DemoDelegadosConGenerics();
-
-			//DemoDelegadosAvanzados1();
+			//DemoDelegadosAvanzados();
 		}
 
 		#region DemoDelegadosBasicos1
@@ -67,12 +65,7 @@ namespace m02
 			throw new NotImplementedException();
 		}
 
-		private static void DemoDelegadosConGenerics()
-		{
-			throw new NotImplementedException();
-		}
-
-		private static void DemoDelegadosAvanzados1()
+		private static void DemoDelegadosAvanzados()
 		{
 			throw new NotImplementedException();
 		}
