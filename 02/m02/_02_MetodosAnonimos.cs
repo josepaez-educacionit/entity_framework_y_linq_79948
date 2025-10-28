@@ -1,6 +1,5 @@
-﻿
-
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Timers;
+using Timer = System.Timers.Timer;
 
 namespace m02
 {
@@ -18,11 +17,11 @@ namespace m02
 			Console.WriteLine("Métodos Anónimos");
 			Console.WriteLine("-----------------------------------\n");
 
-			DemoMetodosSinAnonimos();
-			DemoMetodosConAnonimos();
-			//DemoMetodosAnonimos1();
-			//DemoMetodosAnonimos2();
-			//DemoMetodosAnonimosYEventos();
+			// DemoMetodosSinAnonimos();
+			// DemoMetodosConAnonimos();
+			// DemoMetodosAnonimos1();
+			// DemoMetodosAnonimos2();
+			DemoMetodosAnonimosYEventos();
 		}
 
 		#region DemoMetodosSinAnonimos
@@ -48,7 +47,7 @@ namespace m02
 				cuadrado(numero);
 			}
 		}
-		public static void Cuadrado(int x) { Console.WriteLine(x * x); }
+		public static void Cuadrado(int x) { Console.WriteLine($"{x}² = {x * x}"); ; }
 		#endregion
 
 		#region DemoMetodosConAnonimos
@@ -62,10 +61,7 @@ namespace m02
 			Console.WriteLine("Números:");
 			numeros.ForEach(Console.WriteLine);
 
-			Operacion cuadrado = delegate (int x)
-			{
-				Console.WriteLine($"{x}² = {x}");
-			};
+			Operacion cuadrado = delegate (int x) { Console.WriteLine($"{x}² = {x * x}"); };
 
 			// Recorrer la lista y aplicar la operación
 			Console.WriteLine("\nCuadrados:");
@@ -73,6 +69,80 @@ namespace m02
 			{
 				cuadrado(numero);
 			}
+		}
+		#endregion
+
+		#region DemoMetodosAnonimos1
+		// Filtrar Números Pares
+		private static void DemoMetodosAnonimos1()
+		{
+			Console.WriteLine("Métodos Anónimos con Delegados 1");
+			Console.WriteLine("-----------------------------------\n");
+
+			// Lista de números
+			List<int> numeros = new List<int> { 1, 2, 3, 4, 5 };
+			Console.WriteLine("Números:");
+			numeros.ForEach(Console.WriteLine);
+
+			// Filtrar los números pares
+			Console.WriteLine("\nPares:");
+
+			var pares = numeros.FindAll(
+							delegate (int x)
+							{
+								return x % 2 == 0;
+							}
+							);
+			pares.ForEach(Console.WriteLine);
+		}
+		#endregion
+
+		#region DemoMetodosAnonimos2
+		// Ordenamiento Personalizado
+		private static void DemoMetodosAnonimos2()
+		{
+			Console.WriteLine("Métodos Anónimos con Delegados 2");
+			Console.WriteLine("-----------------------------------\n");
+
+			// Lista de productos
+			List<string> productos = new List<string> { "Notebook", "Monitor", "Mouse", "SSD", "Headset" };
+			Console.WriteLine("Productos:");
+
+			productos.ForEach(Imprimir);
+
+			productos.Sort(
+				delegate (string a, string b)
+					{
+						return a.Length.CompareTo(b.Length);
+					}
+				);
+			Console.WriteLine("\nProductos Ordenados por Longitud:");
+			productos.ForEach(Imprimir);
+		}
+
+		public static void Imprimir<T>(T valor)
+		{
+			Console.WriteLine(valor);
+		}
+		#endregion
+
+		#region DemoMetodosAnonimosYEventos
+
+		// Eventos con Métodos Anónimos
+		private static void DemoMetodosAnonimosYEventos()
+		{
+			Timer myTimer = new Timer(1000);
+			myTimer.Elapsed += delegate (System.Object source, ElapsedEventArgs e)
+			{
+				Console.WriteLine("Un segundo ha pasado.");
+			};
+
+			myTimer.Start();
+
+			Console.WriteLine("Presiona Enter para salir.");
+			Console.ReadLine();
+
+			myTimer.Stop();
 		}
 		#endregion
 	}
