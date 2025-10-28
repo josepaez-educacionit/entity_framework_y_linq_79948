@@ -7,9 +7,9 @@
 			Console.WriteLine("Bienvenidos al Módulo 02");
 
 			//Delegados.Demos();
-			MetodosAnonimos.Demos();
+			//MetodosAnonimos.Demos();
 			//ExpresionesLambda.Demos();
-			//AccionYFunc.Demos();
+			AccionYFunc.Demos();
 			//Predicados.Demos();
 			//InterfacesIEnumerableYIQueryable.Demos();
 		}
