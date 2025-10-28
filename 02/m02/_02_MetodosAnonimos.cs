@@ -1,5 +1,7 @@
 ﻿
 
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace m02
 {
 	// MÉTODOS ANÓNIMOS
@@ -24,6 +26,8 @@ namespace m02
 		}
 
 		#region DemoMetodosSinAnonimos
+		// Ejemplo de Métodos Sin Anónimos con Delegados
+
 		delegate void Operacion(int n);
 		private static void DemoMetodosSinAnonimos()
 		{
@@ -60,7 +64,7 @@ namespace m02
 
 			Operacion cuadrado = delegate (int x)
 			{
-				Console.WriteLine(x * x);
+				Console.WriteLine($"{x}² = {x}");
 			};
 
 			// Recorrer la lista y aplicar la operación
