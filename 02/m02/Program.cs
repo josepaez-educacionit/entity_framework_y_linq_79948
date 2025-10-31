@@ -9,9 +9,9 @@
 			//Delegados.Demos();
 			//MetodosAnonimos.Demos();
 			//ExpresionesLambda.Demos();
-			AccionYFunc.Demos();
+			//AccionYFunc.Demos();
 			//Predicados.Demos();
-			//InterfacesIEnumerableYIQueryable.Demos();
+			InterfacesIEnumerableYIQueryable.Demos();
 		}
 	}
 }

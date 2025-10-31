@@ -31,8 +31,13 @@ namespace m02
 			Console.WriteLine("Action<> y Func<>");
 			Console.WriteLine("-----------------------------------\n");
 
-			DemoAccion1();
+			// DemoAccion1();
+			// DemoAccion2();
+
+			// DemoFunc1();
+			DemoFunc2();
 		}
+
 
 		#region DemoAccion1
 		private static void DemoAccion1()
@@ -52,6 +57,49 @@ namespace m02
 			mostrarMensaje2("Hola, mundo con Action<T>!");
 
 			Console.WriteLine("\n");
+		}
+		#endregion
+
+		#region DemoAccion2
+		// Ejemplo de un Action<> en un ciclo.
+		private static void DemoAccion2()
+		{
+			Console.WriteLine("Demo Action<T> en Ciclos");
+
+			// Definir un Action que acepta un entero como parámetro y lo imprime
+			Action<int> imprimir = numero => Console.WriteLine(numero);
+
+			// Usar un bucle for para llamar al Action con valores del 0 al 4
+			for (int i = 0; i < 5; i++)
+				imprimir(i);
+
+			Console.WriteLine("\n");
+		}
+		#endregion
+
+		#region DemoFunc1
+		// Ejemplo de un Func<> sin parámetros que retorna un valor.
+		private static void DemoFunc1()
+		{
+			//Func<string> obtenerSaludo = () => { return "Hola Mundo!"; };
+
+			Func<string> obtenerSaludo = () => "Hola Mundo!";
+
+			// Invocar la función y mostrar el resultado en la consola.
+			Console.WriteLine(obtenerSaludo());
+		}
+		#endregion
+
+		#region DemoFunc2
+		//  Ejemplo de un Func<> con parámetros y retorno de valor.
+		private static void DemoFunc2()
+		{
+			// Declarar un Func que toma dos enteros y retorna su suma.
+			Func<int, int, int> sumar = (x, y) => x + y;
+
+
+			// Invocar la función con dos números y mostrar el resultado en la consola.
+			Console.WriteLine( sumar(5, 3) );
 		}
 		#endregion
 	}
