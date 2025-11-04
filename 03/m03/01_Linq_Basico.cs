@@ -4,13 +4,13 @@
 	{
 		public static void Demos()
 		{
-			Ejemplo1_ConsultaColeccion();
-			Ejemplo2_GenerarRangoNumeros();
-			Ejemplo3_UnionConsultas();
-			Ejemplo4_ConsultaDistinct();
-			Ejemplo5_ConsultaCadena();
-			Ejemplo6_ConsultaElementos();
-			Ejemplo7_ConsultaElementosTakeSkip();
+			//Ejemplo1_ConsultaColeccion();
+			//Ejemplo2_GenerarRangoNumeros();
+			//Ejemplo3_UnionConsultas();
+			//Ejemplo4_ConsultaDistinct();
+			//Ejemplo5_ConsultaCadena();
+			//Ejemplo6_ConsultaElementos();
+			//Ejemplo7_ConsultaElementosTakeSkip();
 		}
 		private static void Ejemplo1_ConsultaColeccion()
 		{
@@ -83,7 +83,7 @@
 			var nombres = new List<string> { "Juan", "María", "Carlos", "Ana", "Abel", "Pedro" };
 
 			// Filtrar nombres que contienen la letra 'a' (ignorando mayúsculas/minúsculas)
-			var nombresConA = nombres.Where(nombre => nombre.Contains("a", StringComparison.OrdinalIgnoreCase));
+			var nombresConA = nombres.Where( nombre => nombre.Contains("a", StringComparison.OrdinalIgnoreCase));
 
 			foreach (var nombre in nombresConA) Console.WriteLine(nombre);
 		}
