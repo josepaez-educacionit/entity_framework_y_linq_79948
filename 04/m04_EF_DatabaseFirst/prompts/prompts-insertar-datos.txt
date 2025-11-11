@@ -1,0 +1,22 @@
+Actúa como un experto en **SQL Server** y analiza el script correspondiente a la base de datos **MiniGestionComercial** (adjunto).  
+Con base en su estructura, genera los scripts SQL necesarios para **insertar datos de ejemplo** según las siguientes especificaciones:
+
+1. **Tabla [Categorias]**  
+   - Insertar **10 registros** correspondientes a **categorías de productos electrónicos**.
+
+2. **Tabla [Productos]**  
+   - Insertar **30 registros** de **productos electrónicos**.  
+   - Cada producto debe estar **relacionado con una categoría existente**.
+
+3. **Tabla [Clientes]**  
+   - Insertar **10 registros** con **datos realistas** (nombres, direcciones, teléfonos, correos electrónicos) correspondientes a la **región de Argentina**.
+
+4. **Tabla [Pedidos]**  
+   - Insertar **10 registros de pedidos**.  
+   - Cada pedido debe tener **al menos 2 productos asociados** en la tabla **[DetallesPedidos]**.
+
+5. **Condiciones adicionales**  
+   - Los **importes** deben expresarse en **dólares estadounidenses (USD)**, ajustados al **año 2025**.  
+   - Asegúrate de que las **relaciones entre tablas** sean coherentes y respeten las **claves foráneas** definidas en la base de datos.
+
+Entrega los scripts SQL completos, organizados por tabla y con comentarios explicativos para facilitar su comprensión.
