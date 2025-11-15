@@ -1,11 +1,6 @@
 ﻿using m04_EF_DatabaseFirst.Data;
 using m04_EF_DatabaseFirst.Entidades;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace m04_EF_DatabaseFirst.Servicios
 {

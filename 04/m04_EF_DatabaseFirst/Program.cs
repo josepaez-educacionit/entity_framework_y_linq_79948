@@ -2,8 +2,9 @@
 {
 	internal class Program
 	{
-		static void Main(string[] args)
+		async static Task Main(string[] args)
 		{
+			await CRUD_Categorias.Demo();
 		}
 	}
 }
