@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using m04_EF_DatabaseFirst.Data;
 using m04_EF_DatabaseFirst.Entidades;
 
-namespace m05_EF_CRUD_WEB
+namespace m05_EF_CRUD_WEB.Controllers
 {
     public class CategoriasController : Controller
     {
